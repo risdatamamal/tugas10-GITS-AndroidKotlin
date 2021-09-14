@@ -5,35 +5,32 @@ import android.os.Bundle
 import android.widget.AdapterView
 import android.widget.GridView
 import android.widget.Toast
-import androidx.compose.material.icons.Icons
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         lateinit var gridView: GridView
 
         val menusName = arrayOf(
-            "Profile",
-            "Search Job",
-            "Notification",
-            "Messages",
-            "Rate Card",
-            "Review")
+            "Github",
+            "Address",
+            "Email",
+            "LinkedIn",
+            "Instagram",
+            "Steam")
 
         val menusIcon = intArrayOf(
-            /*
-            Icons.Rounded,
-            Icons.Rounded,
-            Icons.Rounded,
-            Icons.Rounded,
-            Icons.Rounded,
-            Icons.Rounded,
-             */
+            R.drawable.github,
+            R.drawable.geo,
+            R.drawable.mail,
+            R.drawable.linkedin,
+            R.drawable.instagram,
+            R.drawable.steam,
         )
 
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        title = "Home"
+        title = "My Profile"
 
         gridView = findViewById(R.id.gridView)
         val mainAdapter = MainAdapter(this@MainActivity, menusName, menusIcon)
